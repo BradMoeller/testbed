@@ -1,4 +1,4 @@
-package com.example.bradmoeller.myapplication;
+package com.example.bradmoeller.myapplication.sync;
 
 import android.accounts.Account;
 import android.content.AbstractThreadedSyncAdapter;
@@ -64,19 +64,19 @@ public class MySyncAdapter extends AbstractThreadedSyncAdapter {
         //try {
             DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             Date date = new Date();
-            SharedPrefHelper.putTime(getContext(), dateFormat.format(date));
+            //SharedPrefHelper.putTime(getContext(), dateFormat.format(date));
             writeToFile(getContext(), dateFormat.format(date));
             //updateBooleanSetting("TestPreference", testValue);
 //        } catch (RemoteException e) {
 //            e.printStackTrace();
 //        }
 
-        new Handler(Looper.getMainLooper()).post(new Runnable() {
-            @Override
-            public void run() {
-                Toast.makeText(getContext(), buildSharedPrefText(), Toast.LENGTH_SHORT).show();
-            }
-        });
+//        new Handler(Looper.getMainLooper()).post(new Runnable() {
+//            @Override
+//            public void run() {
+//                Toast.makeText(getContext(), buildSharedPrefText(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 
     private String buildSharedPrefText() {

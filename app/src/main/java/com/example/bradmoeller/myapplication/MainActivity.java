@@ -5,6 +5,7 @@ import android.accounts.AccountManager;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button button;
     Button button2;
     Button button3;
+    Button jobButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +44,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button = (Button) findViewById(R.id.button);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
+        jobButton = findViewById(R.id.job_button);
         textView = findViewById(R.id.textView);
 
         button.setOnClickListener(this);
+        jobButton.setOnClickListener(this);
 
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,33 +62,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Share File
+                Intent imageIntent = new Intent(Intent.ACTION_SEND);
+                Uri imageUri = Uri.parse("https://www.organicfacts.net/wp-content/uploads/2013/05/Raspberry11.jpg");
+                imageIntent.setType("image/*");
+                imageIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
+                startActivity(imageIntent);
             }
         });
 
-        textView.setText(buildSharedPrefText());
-    }
-
-//    @Override
-//    public void onClick(View view) {
-//        Intent imageIntent = new Intent(Intent.ACTION_SEND);
-//        Uri imageUri = Uri.parse("https://www.organicfacts.net/wp-content/uploads/2013/05/Raspberry11.jpg");
-//        imageIntent.setType("image/*");
-//        imageIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
-//        startActivity(imageIntent);
-//    }
-
-    private String buildSharedPrefText() {
-        StringBuilder sb = new StringBuilder();
-        Set<String> times = SharedPrefHelper.getTimes(this);
-        for (String s : times) {
-            sb.append(s).append("\n");
-        }
-        return sb.toString().trim();
     }
 
     @Override
     public void onClick(View view) {
+        if (view.getId() == R.id.button) {
+            startSyncAdapter();
+        } else if (view.getId() == R.id.job_button) {
+            startJobScheduler();
+        }
+
+    }
+
+    private void startJobScheduler() {
+
+    }
+
+    private void startSyncAdapter() {
 //        Intent intent = new Intent(this, TestService.class);
 //        startService(intent);
 
@@ -103,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mAccount,
                 AUTHORITY,
                 Bundle.EMPTY,
-                600);
+                3600);
 
 //        Bundle bundle = new Bundle();
 //

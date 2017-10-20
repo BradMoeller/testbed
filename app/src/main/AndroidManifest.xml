@@ -32,7 +32,7 @@
         <activity android:name=".ImageList.ImageListActivity"/>
 
         <service
-            android:name=".AuthenticatorService">
+            android:name=".sync.AuthenticatorService">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
@@ -40,7 +40,7 @@
         </service>
 
         <service
-            android:name=".TestService"
+            android:name=".sync.TestService"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.content.SyncAdapter"/>
@@ -60,7 +60,7 @@
         <!--</provider>-->
 
         <provider
-            android:name=".MyProvider"
+            android:name=".sync.MyProvider"
             android:authorities="com.example.bradmoeller.myapplication.provider"
             android:exported="false"
             android:label="Test Provider"

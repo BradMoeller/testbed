@@ -1,4 +1,4 @@
-package com.example.bradmoeller.myapplication;
+package com.example.bradmoeller.myapplication.sync;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -9,6 +9,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.example.bradmoeller.myapplication.MainActivity;
 
 /**
  * Created by bradmoeller on 9/6/17.
@@ -36,7 +38,7 @@ public class TestService extends Service {
             }
         }
         Log.d(TestService.class.getSimpleName(), "Test Service onCreate");
-        Toast.makeText(getApplicationContext(), "Test Service onCreate", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Test Service onCreate", Toast.LENGTH_SHORT).show();
     }
 
     @Nullable
@@ -49,7 +51,7 @@ public class TestService extends Service {
          * constructors call super()
          */
         Log.d(TestService.class.getSimpleName(), "Test Service onBind");
-        Toast.makeText(getApplicationContext(), "Test Service onBind", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "Test Service onBind", Toast.LENGTH_SHORT).show();
         return sSyncAdapter.getSyncAdapterBinder();
     }
 

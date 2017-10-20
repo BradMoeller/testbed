@@ -1,4 +1,4 @@
-package com.example.bradmoeller.myapplication;
+package com.example.bradmoeller.myapplication.sync;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;
