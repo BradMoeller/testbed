@@ -52,8 +52,6 @@ public class MySyncAdapter extends AbstractThreadedSyncAdapter {
         super(context, autoInitialize, allowParallelSyncs);
 
         mContentResolver = context.getContentResolver();
-
-
     }
 
     @Override
@@ -128,26 +126,6 @@ public class MySyncAdapter extends AbstractThreadedSyncAdapter {
 
             }
         }
-
-
-
-
-//        try {
-//            File path = context.getExternalFilesDir(null);
-//            File file = new File(path, "timelog.txt");
-//            FileOutputStream stream = new FileOutputStream(file);
-//            FileWriter fw = new FileWriter(file, true);
-//            try {
-//                fw.append(newDate);
-//            } finally {
-//                fw.flush();
-//                fw.close();
-//                stream.close();
-//            }
-//        }
-//        catch (IOException e) {
-//            Log.e("Exception", "File write failed: " + e.toString());
-//        }
     }
 
     private boolean getBooleanSetting(String preference, boolean defaultValue) throws RemoteException {

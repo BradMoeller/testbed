@@ -1,58 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.bradmoeller.myapplication.MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Sync Adapter"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"/>
-
-    <Button
-        android:id="@+id/job_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start Job Scheduler"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"/>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go To Image Activity"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"/>
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Share File"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"/>
-
-    <ScrollView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        <TextView
+        android:layout_height="match_parent"
+        tools:context="com.example.bradmoeller.myapplication.MainActivity">
+
+        <Button
+            android:id="@+id/button"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text=""
-            android:id="@+id/textView" />
-    </ScrollView>
+            android:layout_height="wrap_content"
+            android:text="Start Sync Adapter"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"/>
 
+        <Button
+            android:id="@+id/job_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Job Scheduler"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go To Image Activity"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share File"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <Button
+            android:id="@+id/contacts_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go To Contacts Activity"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <Button
+            android:id="@+id/notifications_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Push Notifications"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <Button
+            android:id="@+id/merge_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Merge View Activity"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <Button
+            android:id="@+id/lifecycle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lifecycle Activity"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <Button
+            android:id="@+id/kotlin_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kotlin Playground"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <Button
+            android:id="@+id/clean_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clean Architecture"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <Button
+            android:id="@+id/video_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Video Test"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+</ScrollView>
+
